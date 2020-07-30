@@ -29,7 +29,7 @@
                 risus, ut eleifend ipsum. Quisque molestie ligula sapien, sed
                 mollis lectus malesuada eget.
             </p>
-                <form class="m-5">
+                <form class="m-5" @submit.prevent="submitAudit">
                     <div class="form-group row col-md-6 mx-auto">
                         <label for="inputEmail3" class="col-sm-2 col-form-label"
                             >Email</label
@@ -39,6 +39,7 @@
                                 type="email"
                                 class="form-control"
                                 id="inputEmail3"
+                                v-model="auditEmail"
                             />
                         </div>
                     </div>
@@ -48,19 +49,20 @@
                         >
                         <div class="col-sm-10">
                             <input
-                                type="text"
+                                type="url"
                                 class="form-control"
                                 id="inputUrl"
+                                v-model="auditLinkRepo"
                             />
                         </div>
                     </div>
                     <div class="d-flex justify-content-center">
-                    <a
+                    <button
                         type="submit"
                         class="btn btn-dark text-white"
                     >
                         Analyser
-                    </a>
+                    </button>
                     </div>
                 </form>
             <div class="d-flex justify-content-center ">
@@ -72,6 +74,24 @@
 
 <script>
 export default {
+    data() {
+        return{
+            auditEmail: '',
+            auditLinkRepo: ''
+        }
+    },
+
+    methods: {
+        submitAudit() {
+          /*   axios.post('', {
+                email: this.auditEmail,
+                LinkRepo: this.auditLinkRepo
+            }); */
+            console.log(this.auditEmail);
+            console.log(this.auditLinkRepo);
+
+        }
+    },
     mounted() {
         console.log("Component mounted.");
     }
