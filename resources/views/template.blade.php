@@ -20,13 +20,18 @@
                             <router-link to="/" class="nav-link text-light text-uppercase">Accueil</router-link>
                         </li>
                         <li class="nav-item">
-                        <router-link to="/audit" class="nav-link text-light text-uppercase">Audit de sécurité</router-link>
+                            <router-link to="/audit" class="nav-link text-light text-uppercase">Audit de sécurité
+                            </router-link>
                         </li>
                         <li class="nav-item">
-                        <router-link to="/documentation" class="nav-link text-light text-uppercase">Documentation</router-link>
+                            <router-link to="/documentation" class="nav-link text-light text-uppercase">Documentation
+                            </router-link>
                         </li>
                         <li class="nav-item">
-                        <router-link to="/donate" class="nav-link text-light text-uppercase">Donation</router-link>
+                            <router-link to="/donate" class="nav-link text-light text-uppercase">Donation</router-link>
+                        </li>
+                        <li class="nav-item">
+                            <router-link to="/contact" class="nav-link text-light text-uppercase">Contact</router-link>
                         </li>
                     </ul>
                     <ul class="nav justify-content-end">
@@ -36,29 +41,29 @@
                     </ul>
                 </div>
             </nav>
-       </header>
+        </header>
 
         <router-view></router-view>
-        
+
         <footer>
-        <div class="navbar navbar-expand-lg navbar-dark bg-dark p-4 row align-items-center">
-           
+            <div class="navbar navbar-expand-lg navbar-dark bg-dark p-4 row align-items-center">
+
                 <div class="p-5 col-12 col-md-5 col-lg-4 order-md-2 text-light">
                     <h3>BESOIN D'AIDE</h3>
                     <router-link to="/documentation" class="btn btn-light mt-2">Documentation</router-link>
                 </div>
                 <div class="p-5 col-12 col-md-5 col-lg-4 order-md-2  text-light">
                     <h3>CONTACTEZ-NOUS</h3>
-                  
+
                 </div>
                 <div class="p-5 col-12 col-md-5 col-lg-4 order-md-2 text-light">
                     <h3>GITCHECKER</h3>
                     <p>est un outil d'audit de cybersécurité</p>
                     <p>Copyright © It-Akademy 2020 </p>
                 </div>
-          
-        </div>
-    </footer>
+
+            </div>
+        </footer>
     </div>
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
