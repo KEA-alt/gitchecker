@@ -6,7 +6,25 @@
             </h1>
         </div>
 
-        <div class=" p-5  bg-white">
+<div class=" pt-5  bg-white ">
+            <h2 class="d-flex justify-content-center">
+                SOUS TITRE
+            </h2>
+            <div class="d-flex justify-content-center">
+            <p class=" col-lg-8">
+             
+                Pellentesque habitant morbi tristique senectus et netus et
+                malesuada fames ac turpis egestas. Phasellus mauris diam,
+                sodales id urna ac, condimentum convallis purus. Lorem ipsum
+                dolor sit amet, consectetur adipiscing elit. 
+                </p>
+            </div>   
+             <div class="d-flex justify-content-center pb-3">
+                <img class="" width="150" height="150" src="img/contact.png" />
+            </div> 
+</div>
+
+        <div class=" bg-white pb-5">
             <div class="container">
                 <form action="#" method="post">
                     <div class="form-row">
@@ -23,8 +41,8 @@
                         </div>
                         <textarea class="form-control" placeholder="Message" id="content" rows="3"
                             name="content"></textarea>
-                        <div class="buttonContainer">
-                            <button class="btn btn-success" type="submit">Envoyer</button>
+                        <div class="m-2 buttonContainer mx-auto">
+                            <button class="btn btn-info text-white" type="submit">Envoyer</button>
                         </div>
                     </div>
                 </form>
