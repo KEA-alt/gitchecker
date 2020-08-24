@@ -13,6 +13,9 @@
     <div id="app">
         <header>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                 <img class="navbar-brand logoNav" src="{{ asset('img/NULLLOGO.png') }}"></img>
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
