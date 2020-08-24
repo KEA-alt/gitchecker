@@ -5,11 +5,11 @@
         </div>
         <div class="row align-items-center bg-dark">
             <div
-                class="col-12 col-md-5 col-lg-3 order-md-2 d-flex justify-content-center"
+                class="col-12 col-md-5 col-lg-3 order-md-2 d-flex justify-content-center mt-3"
             >
                 <img class=" " width="200" height="200" src="img/doc0.png" />
             </div>
-            <div class="m-5 col-12 col-md-5 col-lg-8 order-md-2 text-white">
+            <div class="p-5 col-12 col-md-5 col-lg-8 order-md-2 text-white">
                 <h2>TITRE BLOC</h2>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -45,7 +45,7 @@
         <div
             class="row align-items-center bg-white d-flex justify-content-center"
         >
-            <div class="m-5 col-12 col-md-5 col-lg-8 order-md-2">
+            <div class="p-5 col-12 col-md-5 col-lg-8 order-md-2">
                 <h2>TITRE BLOC</h2>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -70,17 +70,17 @@
                     lectus malesuada eget.
                 </p>
             </div>
-            <div class="col-12 col-md-5 col-lg-3 order-md-2">
+            <div class="col-12 col-md-5 col-lg-3 order-md-2 d-flex justify-content-center">
                 <img class=" " width="200" height="200" src="img/doc1.png" />
             </div>
         </div>
         <div class="row align-items-center bg-dark">
             <div
-                class="col-12 col-md-5 col-lg-3 order-md-2 d-flex justify-content-center"
+                class="col-12 col-md-5 col-lg-3 order-md-2 d-flex justify-content-center mt-3"
             >
                 <img class=" " width="200" height="200" src="img/doc2.png" />
             </div>
-            <div class="m-5 col-12 col-md-5 col-lg-8 order-md-2 text-white">
+            <div class="p-5 col-12 col-md-5 col-lg-8 order-md-2 text-white">
                 <h2>TITRE BLOC</h2>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -116,7 +116,7 @@
         <div
             class="row align-items-center bg-white d-flex justify-content-center"
         >
-            <div class="m-5 col-12 col-md-5 col-lg-8 order-md-2">
+            <div class="p-5 col-12 col-md-5 col-lg-8 order-md-2">
                 <h2>TITRE BLOC</h2>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -141,7 +141,7 @@
                     lectus malesuada eget.
                 </p>
             </div>
-            <div class="col-12 col-md-5 col-lg-3 order-md-2">
+            <div class="col-12 col-md-5 col-lg-3 order-md-2 d-flex justify-content-center">
                 <img class=" " width="200" height="200" src="img/doc3.png" />
             </div>
         </div>
