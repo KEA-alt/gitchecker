@@ -14,7 +14,7 @@
                 </div>
             </div>
         </div>
-        <div class="bg-dark p-5 row d-flex justify-content-center">
+        <div class="bg-dark pt-5 row d-flex justify-content-center">
             <div class="card-deck">
                 <div class="card  mb-3 p-3" style="max-width: 18rem;">
                     <img
