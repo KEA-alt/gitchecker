@@ -26,9 +26,9 @@ import Doc from './components/DocComponent.vue';
 import Audit from './components/AuditComponent.vue';
 import Donate from './components/DonateComponent.vue';
 import Contact from './components/ContactComponent.vue';
+import Error404 from './components/404Component.vue';
 
-const routes = [
-    {
+const routes = [{
         path: '/',
         component: Home
     },
@@ -47,10 +47,21 @@ const routes = [
     {
         path: '/contact',
         component: Contact
+    },
+    {
+        path: '/error404',
+        component: Error404
+    },
+
+    {
+        path: '*',
+        redirect: '/error404'
     }
 ]
 
-const routeur = new VueRouter({routes});
+const routeur = new VueRouter({
+    routes
+});
 
 //Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
