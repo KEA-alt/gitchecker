@@ -8,15 +8,13 @@
 
 <div class=" pt-5  bg-white ">
             <h2 class="d-flex justify-content-center">
-                SOUS TITRE
+                Restons en contact !
             </h2>
             <div class="d-flex justify-content-center">
-            <p class=" col-lg-8">
-             
-                Pellentesque habitant morbi tristique senectus et netus et
-                malesuada fames ac turpis egestas. Phasellus mauris diam,
-                sodales id urna ac, condimentum convallis purus. Lorem ipsum
-                dolor sit amet, consectetur adipiscing elit. 
+            <p class="col-lg-8">
+            Une question, un renseignement ou même un conseil ? Nous sommes à votre écoute ! 
+            Remplissez le formulaire juste dessous et nous ferons tout pour vous répondre dans les plus bref délais.<br> 
+            À de suite ...
                 </p>
             </div>   
              <div class="d-flex justify-content-center pb-3">
