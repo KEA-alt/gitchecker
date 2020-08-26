@@ -14,7 +14,7 @@
                 </div>
             </div>
         </div>
-        <div class="bg-dark p-5 row d-flex justify-content-center">
+        <div class="bg-dark pt-5 row d-flex justify-content-center">
             <div class="card-deck">
                 <div class="card  mb-3 p-3" style="max-width: 18rem;">
                     <img
@@ -64,9 +64,9 @@
             </div>
         </div>
         <div class="row align-items-center bg-white">
-            <div class="m-5 col-12 col-md-5 col-lg-5 order-md-2">
-                <h2>TITRE BLOC</h2>
-                <p>
+            <div class="p-5 col-12 col-md-5 col-lg-7 order-md-2">
+                <h2 class="p-3">TITRE BLOC</h2>
+                <p class="p-3">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Mauris pretium vehicula orci. Integer at porta risus, ut
                     eleifend ipsum. Quisque molestie ligula sapien, sed mollis

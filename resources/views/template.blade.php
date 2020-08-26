@@ -14,7 +14,10 @@
         <header>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3">
                 <img class="navbar-brand logoNav" src="{{ asset('img/NULLLOGO.png') }}"></img>
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                         <li class="nav-item">
                             <router-link to="/" class="nav-link text-light text-uppercase">Accueil</router-link>
