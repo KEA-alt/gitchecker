@@ -83,13 +83,12 @@ export default {
 
     methods: {
         submitAudit() {
-          /*   axios.post('', {
-                email: this.auditEmail,
-                LinkRepo: this.auditLinkRepo
-            }); */
+           axios.post('/api/audit', {
+                mail: this.auditEmail,
+                link: this.auditLinkRepo
+            });
             console.log(this.auditEmail);
             console.log(this.auditLinkRepo);
-
         }
     },
     mounted() {
