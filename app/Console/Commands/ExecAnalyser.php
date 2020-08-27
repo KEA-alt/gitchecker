@@ -39,7 +39,7 @@ class ExecAnalyser extends Command
     {
         $link = $this->argument('link');
         // execute command
-        exec("sh exakat/exakat.sh ".$link, $output);
+        exec("bash exakat/exakat.sh ".$link, $output);
         // print output from command
         $this->comment( implode( PHP_EOL, $output ) );
     }
