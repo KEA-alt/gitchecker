@@ -38,7 +38,7 @@ class ContactController extends Controller
                 $m->to('gitcheckerapp@gmail.com');
             });
             return response()->json(['message' => 'Request completed']);
-        }catch(){
+        }catch(Exception $e){
             return response()->json(['error' => 'Request error']);
         }
     }
