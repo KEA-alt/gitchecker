@@ -4,6 +4,7 @@
             <h1 class="mt-5 d-flex justify-content-center">Rapport</h1>
         </div>
         <div class=" p-5  bg-white">
+            <b-alert variant="success" show>Success Alert</b-alert>
             <div id="accordion" class="container">
                 <nav>
                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -47,7 +48,37 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="nav-phpcs" role="tabpanel" aria-labelledby="nav-phpcs-tab">PhpCS
+                    <div class="tab-pane fade" id="nav-phpcs" role="tabpanel" aria-labelledby="nav-phpcs-tab">
+                        <div class="card" v-for="(message, name, index) in contentPhpCS.files" :key="name.value">
+                            <div class="card-header text-center" v-bind:id="'heading'+index">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse"
+                                        v-bind:data-target="'#collapse'+index" aria-expanded="false"
+                                        v-bind:aria-controls="'collapse'+index">
+                                        <p>Il y a {{ message.errors }} erreurs dans le fichier : </p>
+                                        <p><strong>{{ name }}</strong></p>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div v-bind:id="'collapse'+index" class="collapse" v-bind:aria-labelledby="'heading'+index"
+                                data-parent="#accordion" v-for="(message, name) in message.messages"
+                                :key="name.value">
+                                <template v-if="message.ignorable">
+                                    <div class="card-body alert-danger">
+                                        <p><strong>Erreur numéro : </strong>{{ name }}</p>
+                                        <p><strong>Message : </strong>{{message.message}}</p>
+                                        <p><strong>Ligne : </strong>{{message.line}}</p>
+                                    </div>
+                                </template>
+                                <template v-else>
+                                    <div class="card-body alert-warning">
+                                        <p><strong>Erreur numéro : </strong>{{ name }}</p>
+                                        <p><strong>Message : </strong>{{message.message}}</p>
+                                        <p><strong>Ligne : </strong>{{message.line}}</p>
+                                    </div>
+                                </template>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
