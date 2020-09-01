@@ -31,10 +31,17 @@
                             </button>
                         </h5>
                     </div>
-                    <div v-bind:id="'collapse'+index" class="collapse" v-bind:aria-labelledby="'heading'+index" data-parent="#accordion">
-                        <div class="card-body" v-for="(message, name, index) in message.messages" :key="message.message">
-                            Erreur numéro : {{ name }}<br>Message : {{message.message}}<br>Ligne : {{message.line}}<br>
-                        </div>
+                    <div v-bind:id="'collapse'+index" class="collapse" v-bind:aria-labelledby="'heading'+index" data-parent="#accordion" v-for="(message, name) in message.messages" :key="message.message">
+                        <template v-if="message.ignorable">
+                            <div class="card-body alert alert-warning" >
+                                Erreur numéro : {{ name }}<br>Message : {{message.message}}<br>Ligne : {{message.line}}<br>
+                            </div>  
+                        </template>
+                        <template v-else>
+                            <div class="card-body alert alert-danger" >
+                                Erreur numéro : {{ name }}<br>Message : {{message.message}}<br>Ligne : {{message.line}}<br>
+                            </div>  
+                        </template>
                     </div>
                 </div>
             </div>

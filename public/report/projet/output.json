@@ -10,7 +10,7 @@
                 {
                     "message": "Property Character::$name has no typehint specified.",
                     "line": 5,
-                    "ignorable": true
+                    "ignorable": false
                 },
                 {
                     "message": "Property Character::$lifePoints has no typehint specified.",
