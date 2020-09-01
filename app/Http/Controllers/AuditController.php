@@ -11,6 +11,9 @@ class AuditController extends Controller
     public function audit(Request $request){
         $mail = $request->input('mail');
         $link = $request->input('link');
+        if(substr($link, -4) == ".git"){
+            $link = substr($link, 0, -4);
+        }
         $rand = $this->generateReportId($link);
         $reponame = $this->getRepoName($link);
         try{
@@ -45,9 +48,6 @@ class AuditController extends Controller
     }
 
     private static function generateReportId($link){
-        if(substr($link, -4) == ".git"){
-            $link = substr($link, 0, -4);
-        }
         //recuperation des variables
         $part = explode("/", $link);
         $username = $part[3];
