@@ -5,19 +5,41 @@
         </div>
 
         <div class=" p-5  bg-white">
-            <ul id="v-for-object" class="demo">
-                <li v-for="(message, name) in content.files" :key="message.message">
+            <!--
+            <div id="v-for-object" class="demo">
+                <div v-for="(message, name) in content.files" :key="message.message">
                     Il y a {{ message.errors }} erreurs dans le fichier : <br>{{ name }} <br><br>
                     <div>
-                <li v-for="(message, name) in message.messages" :key="message.message">Erreur numéro : {{ name }}<br>Message :
-                    {{message.message}}<br>Ligne : {{message.line}}<br></li>
-        </div>
-        
-        <br><br><br><br>
-        </li>
-        </ul>
+                        <div v-for="(message, name) in message.messages" :key="message.message">
+                            Erreur numéro :
+                            {{ name }}<br>Message :
+                            {{message.message}}<br>Ligne : {{message.line}}<br>
+                        </div>
+                    </div>
+                    <br><br>
+                </div>
+            </div>
+            -->
 
-    </div>
+            <div id="accordion">
+                <div class="card" v-for="(message, name, index) in content.files" :key="message.message">
+                    <div class="card-header" v-bind:id="'heading'+index">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" v-bind:data-target="'#collapse'+index"
+                                aria-expanded="false" v-bind:aria-controls="'collapse'+index">
+                                Il y a {{ message.errors }} erreurs dans le fichier : <br>{{ name }}
+                            </button>
+                        </h5>
+                    </div>
+                    <div v-bind:id="'collapse'+index" class="collapse" v-bind:aria-labelledby="'heading'+index" data-parent="#accordion">
+                        <div class="card-body" v-for="(message, name, index) in message.messages" :key="message.message">
+                            Erreur numéro : {{ name }}<br>Message : {{message.message}}<br>Ligne : {{message.line}}<br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
 </template>
 
@@ -31,11 +53,11 @@
         },
 
         created() {
-            axios.get('/report/'+this.reportId+'/output.json').then(response => {
-                    this.content = response["data"];
-                }).catch(err => console.error(err));
+            axios.get('/report/' + this.reportId + '/output.json').then(response => {
+                this.content = response["data"];
+            }).catch(err => console.error(err));
         },
-        
+
         mounted() {
             console.log("Component mounted.");
         }
