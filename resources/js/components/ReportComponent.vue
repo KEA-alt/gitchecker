@@ -80,7 +80,11 @@
         },
 
         created() {
-            axios.get('/report/' + this.reportId + '/output.json').then(response => {
+            axios.get('/report/' + this.reportId + '/phpstan.json').then(response => {
+                this.contentPhpStan = response["data"];
+            }).catch(err => console.error(err));
+
+            axios.get('/report/' + this.reportId + '/phpcs.json').then(response => {
                 this.contentPhpStan = response["data"];
             }).catch(err => console.error(err));
         },
