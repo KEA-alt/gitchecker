@@ -50,7 +50,7 @@ const routes = [{
         component: Contact
     },
     {
-        path: '/report',
+        path: '/report/:reportId',
         component: Report
     },
     {
