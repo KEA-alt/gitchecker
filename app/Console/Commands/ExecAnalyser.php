@@ -55,7 +55,8 @@ class ExecAnalyser extends Command
 
 
         // execute command
-        exec('mkdir /var/www/html/gitchecker/public/report/'.$rand.' && cd /var/www/html/gitchecker/public/report/'.$rand.' && git clone '.$link.' && ../../.././vendor/bin/phpstan analyse '.$reponame.' -l 8 --e$        exec('cd /var/www/html/gitchecker/public/report/'.$rand.' && php ../../.././vendor/bin/phpcs '.$reponame.' --report=json > phpcs.json');
+        exec('mkdir /var/www/html/gitchecker/public/report/'.$rand.' && cd /var/www/html/gitchecker/public/report/'.$rand.' && git clone '.$link.' && ../../.././vendor/bin/phpstan analyse '.$reponame.' -l 8 --error-format prettyJson > phpstan.json');     
+        exec('cd /var/www/html/gitchecker/public/report/'.$rand.' && php ../../.././vendor/bin/phpcs '.$reponame.' --report=json > phpcs.json');
         //echo exec('git clone '.$link);
         //exec('./vendor/bin/phpstan analyse '.$username.'/'.$reponame);
         //print output from command
