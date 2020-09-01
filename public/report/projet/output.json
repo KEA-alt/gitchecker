@@ -1,280 +1,110 @@
 {
     "totals": {
         "errors": 0,
-        "file_errors": 47
+        "file_errors": 17
     },
     "files": {
-        "C:\\gitHub\\POO-D6\\classes\\Character.php": {
-            "errors": 9,
+        "/var/www/html/gitchecker/public/report/a3OaKb1lP-ObP13APHt-1E/POO-PHP/classes/Character.php": {
+            "errors": 10,
             "messages": [
                 {
-                    "message": "Property classes\\Character::$pv has no typehint specified.",
+                    "message": "Property Character::$name has no typehint specified.",
+                    "line": 5,
+                    "ignorable": true
+                },
+                {
+                    "message": "Property Character::$lifePoints has no typehint specified.",
                     "line": 6,
                     "ignorable": true
                 },
                 {
-                    "message": "Property classes\\Character::$name has no typehint specified.",
+                    "message": "Property Character::$rhinoshield has no typehint specified.",
                     "line": 7,
                     "ignorable": true
                 },
                 {
-                    "message": "Property classes\\Character::$lifePoints has no typehint specified.",
+                    "message": "Property Character::$lastAttack has no typehint specified.",
                     "line": 8,
                     "ignorable": true
                 },
                 {
-                    "message": "Property classes\\Character::$magicPoints has no typehint specified.",
-                    "line": 9,
-                    "ignorable": true
-                },
-                {
-                    "message": "Method classes\\Character::getLifePoints() has no return typehint specified.",
+                    "message": "Method Character::getLifePoints() has no return typehint specified.",
                     "line": 15,
                     "ignorable": true
                 },
                 {
-                    "message": "Method classes\\Character::setLifePoints() has no return typehint specified.",
+                    "message": "Method Character::useRhinoshield() has no return typehint specified.",
                     "line": 19,
                     "ignorable": true
                 },
                 {
-                    "message": "Method classes\\Character::setLifePoints() has parameter $dmg with no typehint specified.",
-                    "line": 19,
-                    "ignorable": true
-                },
-                {
-                    "message": "Method classes\\Character::realSetLifePoints() has no return typehint specified.",
-                    "line": 27,
-                    "ignorable": true
-                },
-                {
-                    "message": "Method classes\\Character::realSetLifePoints() has parameter $how with no typehint specified.",
-                    "line": 27,
-                    "ignorable": true
-                }
-            ]
-        },
-        "C:\\gitHub\\POO-D6\\classes\\Druid.php": {
-            "errors": 5,
-            "messages": [
-                {
-                    "message": "Property classes\\Druid::$forestRounds has no typehint specified.",
-                    "line": 6,
-                    "ignorable": true
-                },
-                {
-                    "message": "Method classes\\Druid::attack() has no return typehint specified.",
-                    "line": 8,
-                    "ignorable": true
-                },
-                {
-                    "message": "Method classes\\Druid::heal() has no return typehint specified.",
-                    "line": 22,
-                    "ignorable": true
-                },
-                {
-                    "message": "Method classes\\Druid::forestStrength() has no return typehint specified.",
-                    "line": 28,
-                    "ignorable": true
-                },
-                {
-                    "message": "Method classes\\Druid::stickHit() has no return typehint specified.",
-                    "line": 34,
-                    "ignorable": true
-                }
-            ]
-        },
-        "C:\\gitHub\\POO-D6\\classes\\Mage.php": {
-            "errors": 7,
-            "messages": [
-                {
-                    "message": "Property classes\\Mage::$shield has no typehint specified.",
-                    "line": 6,
-                    "ignorable": true
-                },
-                {
-                    "message": "Method classes\\Mage::attack() has no return typehint specified.",
-                    "line": 13,
-                    "ignorable": true
-                },
-                {
-                    "message": "Variable $status might not be defined.",
-                    "line": 20,
-                    "ignorable": true
-                },
-                {
-                    "message": "Method classes\\Mage::fireball() has no return typehint specified.",
-                    "line": 23,
-                    "ignorable": true
-                },
-                {
-                    "message": "Method classes\\Mage::shield() has no return typehint specified.",
-                    "line": 42,
-                    "ignorable": true
-                },
-                {
-                    "message": "Method classes\\Mage::setLifePoints() has no return typehint specified.",
-                    "line": 48,
-                    "ignorable": true
-                },
-                {
-                    "message": "Method classes\\Mage::setLifePoints() has parameter $dmg with no typehint specified.",
-                    "line": 48,
-                    "ignorable": true
-                }
-            ]
-        },
-        "C:\\gitHub\\POO-D6\\classes\\Necromancer.php": {
-            "errors": 5,
-            "messages": [
-                {
-                    "message": "Property classes\\Necromancer::$prediction has no typehint specified.",
-                    "line": 6,
-                    "ignorable": true
-                },
-                {
-                    "message": "Method classes\\Necromancer::attack() has no return typehint specified.",
-                    "line": 8,
-                    "ignorable": true
-                },
-                {
-                    "message": "Method classes\\Necromancer::death() has no return typehint specified.",
+                    "message": "Method Character::setLifePoints() has no return typehint specified.",
                     "line": 25,
                     "ignorable": true
                 },
                 {
-                    "message": "Method classes\\Necromancer::deathPredict() has no return typehint specified.",
-                    "line": 31,
+                    "message": "Method Character::setLifePoints() has parameter $dmg with no typehint specified.",
+                    "line": 25,
                     "ignorable": true
                 },
                 {
-                    "message": "Method classes\\Necromancer::reapingHook() has no return typehint specified.",
+                    "message": "Method Character::attack() has no return typehint specified.",
+                    "line": 33,
+                    "ignorable": true
+                },
+                {
+                    "message": "Call to an undefined method Character::choiceAttack().",
                     "line": 38,
                     "ignorable": true
                 }
             ]
         },
-        "C:\\gitHub\\POO-D6\\classes\\Warrior.php": {
-            "errors": 5,
+        "/var/www/html/gitchecker/public/report/a3OaKb1lP-ObP13APHt-1E/POO-PHP/classes/Mage.php": {
+            "errors": 4,
             "messages": [
                 {
-                    "message": "Property classes\\Warrior::$boost has no typehint specified.",
-                    "line": 6,
+                    "message": "Property Mage::$magicPoints has no typehint specified.",
+                    "line": 5,
                     "ignorable": true
                 },
                 {
-                    "message": "Method classes\\Warrior::attack() has no return typehint specified.",
-                    "line": 8,
+                    "message": "Method Mage::magicAttack() has no return typehint specified.",
+                    "line": 11,
                     "ignorable": true
                 },
                 {
-                    "message": "Comparison operation \">\" between int<9, max> and 8 is always true.",
-                    "line": 12,
-                    "ignorable": true
-                },
-                {
-                    "message": "Method classes\\Warrior::sword() has no return typehint specified.",
-                    "line": 17,
-                    "ignorable": true
-                },
-                {
-                    "message": "Method classes\\Warrior::boost() has no return typehint specified.",
+                    "message": "Method Mage::shieldAttack() has no return typehint specified.",
                     "line": 30,
+                    "ignorable": true
+                },
+                {
+                    "message": "Method Mage::choiceAttack() has no return typehint specified.",
+                    "line": 42,
                     "ignorable": true
                 }
             ]
         },
-        "C:\\gitHub\\POO-D6\\classes\\autoload.php": {
+        "/var/www/html/gitchecker/public/report/a3OaKb1lP-ObP13APHt-1E/POO-PHP/classes/Warrior.php": {
+            "errors": 2,
+            "messages": [
+                {
+                    "message": "Property Warrior::$critiqueAttack has no typehint specified.",
+                    "line": 6,
+                    "ignorable": true
+                },
+                {
+                    "message": "Method Warrior::choiceAttack() has no return typehint specified.",
+                    "line": 12,
+                    "ignorable": true
+                }
+            ]
+        },
+        "/var/www/html/gitchecker/public/report/a3OaKb1lP-ObP13APHt-1E/POO-PHP/index.php": {
             "errors": 1,
             "messages": [
                 {
                     "message": "Parameter #1 $autoload_function of function spl_autoload_register expects callable(string): void, Closure(mixed): mixed given.",
                     "line": 3,
-                    "ignorable": true
-                }
-            ]
-        },
-        "C:\\gitHub\\POO-D6\\index.php": {
-            "errors": 10,
-            "messages": [
-                {
-                    "message": "Variable $player1 might not be defined.",
-                    "line": 64,
-                    "ignorable": true
-                },
-                {
-                    "message": "Variable $player2 might not be defined.",
-                    "line": 64,
-                    "ignorable": true
-                },
-                {
-                    "message": "Variable $player1 might not be defined.",
-                    "line": 71,
-                    "ignorable": true
-                },
-                {
-                    "message": "Variable $player2 might not be defined.",
-                    "line": 71,
-                    "ignorable": true
-                },
-                {
-                    "message": "Variable $player1 might not be defined.",
-                    "line": 72,
-                    "ignorable": true
-                },
-                {
-                    "message": "Variable $player2 might not be defined.",
-                    "line": 73,
-                    "ignorable": true
-                },
-                {
-                    "message": "Variable $player1 might not be defined.",
-                    "line": 74,
-                    "ignorable": true
-                },
-                {
-                    "message": "Variable $player2 might not be defined.",
-                    "line": 74,
-                    "ignorable": true
-                },
-                {
-                    "message": "Variable $player2 might not be defined.",
-                    "line": 75,
-                    "ignorable": true
-                },
-                {
-                    "message": "Variable $status might not be defined.",
-                    "line": 81,
-                    "ignorable": true
-                }
-            ]
-        },
-        "C:\\gitHub\\POO-D6\\models\\Database.php": {
-            "errors": 5,
-            "messages": [
-                {
-                    "message": "Property Database::$obj has no typehint specified.",
-                    "line": 8,
-                    "ignorable": true
-                },
-                {
-                    "message": "Method Database::getConn() has no return typehint specified.",
-                    "line": 10,
-                    "ignorable": true
-                },
-                {
-                    "message": "Method Database::getAllCharacters() has no return typehint specified.",
-                    "line": 17,
-                    "ignorable": true
-                },
-                {
-                    "message": "Method Database::getOneCharacter() has no return typehint specified.",
-                    "line": 25,
-                    "ignorable": true
-                },
-                {
-                    "message": "Method Database::getOneCharacter() has parameter $id with no typehint specified.",
-                    "line": 25,
                     "ignorable": true
                 }
             ]
