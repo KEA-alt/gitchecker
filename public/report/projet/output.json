@@ -1,0 +1,114 @@
+{
+    "totals": {
+        "errors": 0,
+        "file_errors": 17
+    },
+    "files": {
+        "/var/www/html/gitchecker/public/report/a3OaKb1lP-ObP13APHt-1E/POO-PHP/classes/Character.php": {
+            "errors": 10,
+            "messages": [
+                {
+                    "message": "Property Character::$name has no typehint specified.",
+                    "line": 5,
+                    "ignorable": false
+                },
+                {
+                    "message": "Property Character::$lifePoints has no typehint specified.",
+                    "line": 6,
+                    "ignorable": true
+                },
+                {
+                    "message": "Property Character::$rhinoshield has no typehint specified.",
+                    "line": 7,
+                    "ignorable": true
+                },
+                {
+                    "message": "Property Character::$lastAttack has no typehint specified.",
+                    "line": 8,
+                    "ignorable": true
+                },
+                {
+                    "message": "Method Character::getLifePoints() has no return typehint specified.",
+                    "line": 15,
+                    "ignorable": true
+                },
+                {
+                    "message": "Method Character::useRhinoshield() has no return typehint specified.",
+                    "line": 19,
+                    "ignorable": true
+                },
+                {
+                    "message": "Method Character::setLifePoints() has no return typehint specified.",
+                    "line": 25,
+                    "ignorable": true
+                },
+                {
+                    "message": "Method Character::setLifePoints() has parameter $dmg with no typehint specified.",
+                    "line": 25,
+                    "ignorable": true
+                },
+                {
+                    "message": "Method Character::attack() has no return typehint specified.",
+                    "line": 33,
+                    "ignorable": true
+                },
+                {
+                    "message": "Call to an undefined method Character::choiceAttack().",
+                    "line": 38,
+                    "ignorable": true
+                }
+            ]
+        },
+        "/var/www/html/gitchecker/public/report/a3OaKb1lP-ObP13APHt-1E/POO-PHP/classes/Mage.php": {
+            "errors": 4,
+            "messages": [
+                {
+                    "message": "Property Mage::$magicPoints has no typehint specified.",
+                    "line": 5,
+                    "ignorable": true
+                },
+                {
+                    "message": "Method Mage::magicAttack() has no return typehint specified.",
+                    "line": 11,
+                    "ignorable": true
+                },
+                {
+                    "message": "Method Mage::shieldAttack() has no return typehint specified.",
+                    "line": 30,
+                    "ignorable": true
+                },
+                {
+                    "message": "Method Mage::choiceAttack() has no return typehint specified.",
+                    "line": 42,
+                    "ignorable": true
+                }
+            ]
+        },
+        "/var/www/html/gitchecker/public/report/a3OaKb1lP-ObP13APHt-1E/POO-PHP/classes/Warrior.php": {
+            "errors": 2,
+            "messages": [
+                {
+                    "message": "Property Warrior::$critiqueAttack has no typehint specified.",
+                    "line": 6,
+                    "ignorable": true
+                },
+                {
+                    "message": "Method Warrior::choiceAttack() has no return typehint specified.",
+                    "line": 12,
+                    "ignorable": true
+                }
+            ]
+        },
+        "/var/www/html/gitchecker/public/report/a3OaKb1lP-ObP13APHt-1E/POO-PHP/index.php": {
+            "errors": 1,
+            "messages": [
+                {
+                    "message": "Parameter #1 $autoload_function of function spl_autoload_register expects callable(string): void, Closure(mixed): mixed given.",
+                    "line": 3,
+                    "ignorable": true
+                }
+            ]
+        }
+    },
+    "errors": []
+}

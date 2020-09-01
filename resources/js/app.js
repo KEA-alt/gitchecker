@@ -26,6 +26,7 @@ import Doc from './components/DocComponent.vue';
 import Audit from './components/AuditComponent.vue';
 import Donate from './components/DonateComponent.vue';
 import Contact from './components/ContactComponent.vue';
+import Report from './components/ReportComponent.vue';
 import Error404 from './components/404Component.vue';
 
 const routes = [{
@@ -47,6 +48,10 @@ const routes = [{
     {
         path: '/contact',
         component: Contact
+    },
+    {
+        path: '/report/:reportId',
+        component: Report
     },
     {
         path: '/error404',
