@@ -29,27 +29,36 @@
                 risus, ut eleifend ipsum. Quisque molestie ligula sapien, sed
                 mollis lectus malesuada eget.
             </p>
-            <form class="m-5" @submit.prevent="submitAudit">
-                <div class="form-group row col-md-6 mx-auto">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-                    <div class="col-sm-10">
-                        <input type="email" class="form-control" id="inputEmail3" v-model="auditEmail" />
-                    </div>
+
+            <div class="my-5">
+                <b-form inline class="justify-content-center" @submit.prevent="submitAudit">
+
+                    <label class="sr-only" for="inputEmail3">E-mail</label>
+                    <b-input-group prepend="@" class="mb-2 mr-sm-2 mb-sm-0">
+                        <b-input type="email" id="inputEmail3" v-model="auditEmail" placeholder="E-mail"></b-input>
+                    </b-input-group>
+
+                    <label class="sr-only" for="inputUrl">Lien du Git</label>
+                    <b-input-group class="mb-2 mr-sm-2 mb-sm-0">
+                        <b-input-group-prepend is-text>
+                            <b-icon icon="link45deg"></b-icon>
+                        </b-input-group-prepend>
+
+                        <b-input type="url" id="inputUrl" v-model="auditLinkRepo" placeholder="Lien du Git"></b-input>
+                    </b-input-group>
+
+                    <b-button type="submit" variant="primary">Envoyer</b-button>
+                </b-form>
+
+                <div>
+                    <b-progress :value="78" :max="100" animated class="w-25 my-5 mx-auto"></b-progress>
                 </div>
-                <div class="form-group row col-md-6 mx-auto">
-                    <label for="inputUrl" class="col-sm-2 col-form-label">Lien du Git</label>
-                    <div class="col-sm-10">
-                        <input type="url" class="form-control" id="inputUrl" v-model="auditLinkRepo" />
-                    </div>
-                </div>
-                <div class="d-flex justify-content-center">
-                    <button type="submit" class="btn btn-dark text-white">
-                        Analyser
-                    </button>
-                </div>
-            </form>
+
+            </div>
+
+
             <div class="d-flex justify-content-center ">
-                <img class="" width="150" height="150" src="img/audit.png" />
+                <b-img class="" width="150" height="150" src="img/audit.png" />
             </div>
         </div>
     </div>
