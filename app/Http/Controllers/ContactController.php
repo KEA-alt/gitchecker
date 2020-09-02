@@ -6,6 +6,7 @@ use Mail;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Jobs\SendMail;
 
 class ContactController extends Controller
 {
@@ -23,20 +24,15 @@ class ContactController extends Controller
         $firstname = $request->input('firstname');
         $lastname = $request->input('lastname');
         $title = 'Contact '.$firstname.' '.$lastname;
-        $content = $request->input('message');
         $mail = $request->input('mail');
+        $content = "Message : {$request->input('message')}";
+        $content .= " / Pour reprendre contact : {$mail}";
 
-        $data = array( 'email' => $mail, 'firstname' => $firstname, 'lastname' => $lastname, 'subject' => $title);
+        $view = 'emails.contact';
+        $data = array('fromMail' => $mail,'fromName' => $firstname.' '.$lastname, 'subject' => $title, 'toMail' => 'gitcheckerapp@gmail.com');
         
         try{
-            Mail::send('emails.send', ['title' => $title, 'content' => $content], function ($m) use ($data)
-            {
-                $m->from($data['email'], $data['firstname'].' '.$data['lastname']);
-
-                $m->subject($data['subject']);
-
-                $m->to('gitcheckerapp@gmail.com');
-            });
+            $this->dispatch(new SendMail($view,$title,$content,$data));
             return response()->json(['message' => 'Request completed']);
         }catch(Exception $e){
             return response()->json(['error' => 'Request error']);

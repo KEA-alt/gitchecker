@@ -352,7 +352,7 @@
                         <p>Bonjour,</p>
                         <p>Vous venez de soumettre un audit de sécurité.</p>
                         <p>Veuillez trouver le lien du résultat de votre analyse ci-dessous :</p>
-                        <a href="http://185.216.25.177/#/report/{{$rand}}">Cliquez-ici pour ouvrir le rapport {{$rand}}</a>
+                        <a href="http://185.216.25.177/#/report/{{$content}}">Cliquez-ici pour ouvrir le rapport {{$content}}</a>
                       </td>
                     </tr>
                   </table>

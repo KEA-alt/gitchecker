@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Mail;
 use Illuminate\Http\Request;
-use Artisan;
+use App\Jobs\ExecuteAudit;
+use App\Jobs\SendMail;
 
 class AuditController extends Controller
 {
@@ -17,33 +18,14 @@ class AuditController extends Controller
         $rand = $this->generateReportId($link);
         $reponame = $this->getRepoName($link);
         try{
-            $exitCode = Artisan::call('execute:analyser', [
-                'link' => $link,
-                'rand' => $rand,
-                'reponame' => $reponame
-            ]);
-            $this->sendAuditMail($mail, $link, $rand, $reponame);
+            $this->dispatch(new ExecuteAudit($link,$rand,$reponame));
+            $view = 'emails.audit';
+            $title = "Le résultat de votre analyse de sécurité sur ".$reponame;
+            $data = array('fromMail' => 'gitcheckerapp@gmail.com','fromName' => 'Gitchecker App', 'subject' => $title, 'toMail' => $mail);
+            $this->dispatch(new SendMail($view,$title,$rand,$data));
             return response()->json(['message' => 'Request completed']);
         }catch(Exception $e){
             return response()->json(['error' => $e]);
-        }
-    }
-
-    private static function sendAuditMail($mail, $link, $rand, $reponame){
-        $title = "Le résultat de votre analyse de sécurité sur ".$reponame;
-        $data = array( 'email' => $mail, 'subject' => $title);
-        try{
-            Mail::send('emails.audit', ['title' => $title, 'rand' => $rand], function ($m) use ($data)
-            {
-                $m->from('gitcheckerapp@gmail.com', 'Gitchecker App');
-
-                $m->subject($data['subject']);
-
-                $m->to($data['email']);
-            });
-            return response()->json(['message' => 'Request completed']);
-        }catch(Exception $e){
-            return response()->json(['error' => 'Request error']);
         }
     }
 
