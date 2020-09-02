@@ -4,11 +4,11 @@ Authors: Pierrick GRANDCLEMENT-CHAFFY
 
 ### Project Team  
 
-* [Manon GOMEZ-MOR](https://github.com/ManonGomez) (Frontend developper) - IT Akademy, Fullstack developper
+* [Manon GOMEZ-MOR](https://github.com/ManonGomez) (Fullstack developper) - IT Akademy, Fullstack developper
 
 * [Kevin AMARAL](https://github.com/KEA-alt) (Fullstack developper) - IT Akademy, Fullstack developper
 
-* [François CANCALON](https://github.com/FrancoisCAN) (Frontend developper) - IT Akademy, Fullstack developper
+* [François CANCALON](https://github.com/FrancoisCAN) (Fullstack developper) - IT Akademy, Fullstack developper
 
 * [Mathieu ESCOS](https://github.com/mathieuescos-IT) (Fullstack developper) - IT Akademy, Fullstack developper
 
