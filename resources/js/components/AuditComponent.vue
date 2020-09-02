@@ -7,27 +7,8 @@
         </div>
 
         <div class=" p-5  bg-white">
-            <h2 class="d-flex justify-content-center">
-                SOUS TITRE
-            </h2>
-            <p class="d-flex justify-content-center">
-                Explications à rédiger<br />
-                Pellentesque habitant morbi tristique senectus et netus et
-                malesuada fames ac turpis egestas. Phasellus mauris diam,
-                sodales id urna ac, condimentum convallis purus. Lorem ipsum
-                dolor sit amet, consectetur adipiscing elit. Mauris pretium
-                vehicula orci. Integer at porta risus, ut eleifend ipsum.
-                Quisque molestie ligula sapien, sed mollis lectus malesuada
-                eget. Pellentesque habitant morbi tristique senectus et netus et
-                malesuada fames ac turpis egestas. Phasellus mauris diam,
-                sodales id urna ac, condimentum convallis purus.<br />
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-                pretium vehicula orci. Integer at porta risus, ut eleifend
-                ipsum. Quisque molestie ligula sapien, sed mollis lectus
-                malesuada eget. Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit. Mauris pretium vehicula orci. Integer at porta
-                risus, ut eleifend ipsum. Quisque molestie ligula sapien, sed
-                mollis lectus malesuada eget.
+            <p class="d-flex justify-content-center text-center">
+                Déposez votre lien juste ici et nous nous occupons de tout. Le résultat vous sera envoyé par mail d'ici quelques secondes, soyez patient, ça arrive !
             </p>
 
             <div class="my-5">
@@ -35,7 +16,7 @@
 
                     <label class="sr-only" for="inputEmail3">E-mail</label>
                     <b-input-group prepend="@" class="mb-2 mr-sm-2 mb-sm-0">
-                        <b-input type="email" id="inputEmail3" v-model="auditEmail" placeholder="E-mail"></b-input>
+                        <b-input type="email" id="inputEmail3" v-model="auditEmail" :state="mailState" placeholder="E-mail" trim></b-input>
                     </b-input-group>
 
                     <label class="sr-only" for="inputUrl">Lien du Git</label>
@@ -44,16 +25,11 @@
                             <b-icon icon="link45deg"></b-icon>
                         </b-input-group-prepend>
 
-                        <b-input type="url" id="inputUrl" v-model="auditLinkRepo" placeholder="Lien du Git"></b-input>
+                        <b-input type="url" id="inputUrl" v-model="auditLinkRepo" :state="urlState" placeholder="Lien du Git" trim></b-input>
                     </b-input-group>
 
-                    <b-button type="submit" variant="primary">Envoyer</b-button>
+                    <b-button type="submit" :disabled="btnState" variant="dark">Envoyer</b-button>
                 </b-form>
-
-                <div>
-                    <b-progress :value="78" :max="100" animated class="w-25 my-5 mx-auto"></b-progress>
-                </div>
-
             </div>
 
 
@@ -66,8 +42,47 @@
 
 <script>
     export default {
+        computed: {
+            mailState() {
+                if (this.auditEmail) {
+                    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                    if (re.test(this.auditEmail)) {
+                        this.btnState2 = true;
+                        return true;
+                    }else{
+                        this.btnState2 = false;
+                        return false;
+                    }
+                } else {
+                    //ne rien faire car value est null
+                    
+                }
+            },
+            urlState() {
+                if (this.auditLinkRepo) {
+                    var re = /(?:(?:https:\/\/github.com\/.+))/;
+                    if (re.test(this.auditLinkRepo)) {
+                        this.btnState1 = true;
+                        return true;
+                    }else{
+                        this.btnState1 = false;
+                        return false;
+                    }
+                } else {
+                    //ne rien faire car value est null
+                }
+            },
+            btnState() {
+                if (this.btnState1 & this.btnState2) {
+                    return false;
+                }
+                return true;
+            }
+        },
         data() {
             return {
+                btnState1: false,
+                btnState2: false,
                 auditEmail: '',
                 auditLinkRepo: ''
             }
@@ -75,10 +90,11 @@
 
         methods: {
             submitAudit() {
-                axios.post('/api/audit', {
+                    axios.post('/api/audit', {
                     mail: this.auditEmail,
                     link: this.auditLinkRepo
                 });
+
                 console.log(this.auditEmail);
                 console.log(this.auditLinkRepo);
             }
