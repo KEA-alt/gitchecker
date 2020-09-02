@@ -32,6 +32,8 @@ import Doc from './components/DocComponent.vue';
 import Audit from './components/AuditComponent.vue';
 import Donate from './components/DonateComponent.vue';
 import Contact from './components/ContactComponent.vue';
+import Politique from './components/PolitiqueComponent.vue';
+import Conditions from './components/ConditionsComponent.vue';
 import Report from './components/ReportComponent.vue';
 import Error404 from './components/404Component.vue';
 
@@ -56,6 +58,14 @@ const routes = [{
         component: Contact
     },
     {
+        path: '/politique',
+        component: Politique
+    },
+    {
+        path: '/conditions',
+        component: Conditions
+    },
+    {
         path: '/report/:reportId',
         component: Report
     },
@@ -63,7 +73,6 @@ const routes = [{
         path: '/error404',
         component: Error404
     },
-
     {
         path: '*',
         redirect: '/error404'

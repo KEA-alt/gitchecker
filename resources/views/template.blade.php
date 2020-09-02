@@ -54,10 +54,13 @@
                 <div class="p-5 col-12 col-md-5 col-lg-4 order-md-2 text-light">
                     <h3>BESOIN D'AIDE</h3>
                     <router-link to="/documentation" class="btn btn-light mt-2">Documentation</router-link>
+                    <router-link to="/politique" class="btn btn-outline-light mt-2">Politique de confidentialité</router-link>
+                    <router-link to="/conditions" class="btn btn-outline-light mt-2">Conditions légales</router-link>
+
                 </div>
                 <div class="p-5 col-12 col-md-5 col-lg-4 order-md-2  text-light">
                     <h3>CONTACTEZ-NOUS</h3>
-
+                    <router-link to="/contact" class="btn btn-light mt-2">Formulaire</router-link>
                 </div>
                 <div class="p-5 col-12 col-md-5 col-lg-4 order-md-2 text-light">
                     <h3>GITCHECKER</h3>
