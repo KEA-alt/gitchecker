@@ -15,3 +15,17 @@ background-size: cover;
 .row{
   margin: 0 auto !important;
 }
+.smallImg{
+  width: 30%;
+}
+.gitImg{
+  width: 60%;
+}
+.bgWhite{
+  background-color: white;
+}
+.docImg{
+  width: 60%;
+  height: 60%;
+  margin: auto;
+}
