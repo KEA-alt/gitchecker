@@ -25,7 +25,7 @@
 
         <div class=" bg-white pb-5">
 
-            <div class="my-5 px-5">
+            <div class=" px-5 bg-white">
                 <b-form @submit.prevent="submitContact">
                     <div class="form-row">
                         <div class="form-group col-md-6">

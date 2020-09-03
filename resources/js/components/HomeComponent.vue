@@ -14,7 +14,7 @@
         </div>
         <div class="bg-dark py-5 row d-flex justify-content-center">
             <div class="card-deck">
-                <b-card bg-variant="light" text-variant="Dark" class="text-center mb-3" style="max-width: 18rem;">
+                <b-card bg-variant="white" text-variant="Dark" class="text-center mb-3" style="max-width: 18rem;">
                     <b-card-img src="img/gitcheckerHome.png" style="width: 30%; margin: 2em 0;" img-alt="Image" img-top>
                     </b-card-img>
                     <b-card-text>
@@ -24,7 +24,7 @@
                     </b-card-text>
                 </b-card>
 
-                <b-card bg-variant="light" text-variant="Dark" class="text-center mb-3" style="max-width: 18rem;">
+                <b-card bg-variant="white" text-variant="Dark" class="text-center mb-3" style="max-width: 18rem;">
                     <b-card-img src="img/gitcheckerHome2.png" style="width: 30%; margin: 2em 0;" img-alt="Image"
                         img-top></b-card-img>
                     <b-card-text>
@@ -33,7 +33,7 @@
                     </b-card-text>
                 </b-card>
 
-                <b-card bg-variant="light" text-variant="Dark" class="text-center mb-3" style="max-width: 18rem;">
+                <b-card bg-variant="white" text-variant="Dark" class="text-center mb-3" style="max-width: 18rem;">
                     <b-card-img src="img/gitcheckerHome3.png" style="width: 30%; margin: 2em 0;" img-alt="Image"
                         img-top></b-card-img>
                     <b-card-text>
