@@ -8,7 +8,8 @@
 
         <div class=" p-5  bg-white">
             <p class="d-flex justify-content-center text-center">
-                Déposez votre lien juste ici et nous nous occupons de tout. Le résultat vous sera envoyé par mail d'ici quelques secondes, soyez patient, ça arrive !
+                Déposez votre lien juste ici et nous nous occupons de tout. Le résultat vous sera envoyé par mail d'ici
+                quelques secondes, soyez patient, ça arrive !
             </p>
 
             <div class="my-5">
@@ -16,7 +17,8 @@
 
                     <label class="sr-only" for="inputEmail3">E-mail</label>
                     <b-input-group prepend="@" class="mb-2 mr-sm-2 mb-sm-0">
-                        <b-input type="email" id="inputEmail3" v-model="auditEmail" :state="mailState" placeholder="E-mail" trim></b-input>
+                        <b-input type="email" id="inputEmail3" v-model="auditEmail" :state="mailState"
+                            placeholder="E-mail" trim></b-input>
                     </b-input-group>
 
                     <label class="sr-only" for="inputUrl">Lien du Git</label>
@@ -25,7 +27,8 @@
                             <b-icon icon="link45deg"></b-icon>
                         </b-input-group-prepend>
 
-                        <b-input type="url" id="inputUrl" v-model="auditLinkRepo" :state="urlState" placeholder="Lien du Git" trim></b-input>
+                        <b-input type="url" id="inputUrl" v-model="auditLinkRepo" :state="urlState"
+                            placeholder="Lien du Git" trim></b-input>
                     </b-input-group>
 
                     <b-button type="submit" :disabled="btnState" variant="dark">Envoyer</b-button>
@@ -45,17 +48,18 @@
         computed: {
             mailState() {
                 if (this.auditEmail) {
-                    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                    var re =
+                        /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
                     if (re.test(this.auditEmail)) {
                         this.btnState2 = true;
                         return true;
-                    }else{
+                    } else {
                         this.btnState2 = false;
                         return false;
                     }
                 } else {
                     //ne rien faire car value est null
-                    
+
                 }
             },
             urlState() {
@@ -64,7 +68,7 @@
                     if (re.test(this.auditLinkRepo)) {
                         this.btnState1 = true;
                         return true;
-                    }else{
+                    } else {
                         this.btnState1 = false;
                         return false;
                     }
@@ -90,7 +94,7 @@
 
         methods: {
             submitAudit() {
-                    axios.post('/api/audit', {
+                axios.post('/api/audit', {
                     mail: this.auditEmail,
                     link: this.auditLinkRepo
                 });
