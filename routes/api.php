@@ -16,3 +16,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('/contact', 'ContactController@sendEmail');
 Route::post('/audit', 'AuditController@audit');
+Route::post('/stripe', 'StripePaymentController@stripePost');
