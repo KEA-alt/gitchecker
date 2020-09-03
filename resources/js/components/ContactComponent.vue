@@ -65,7 +65,7 @@
 
                     <b-button type="submit" :disabled="btnState" variant="dark">Envoyer</b-button>
 
-                    <h3 id="pMsg" class="py-5 justify-content-center text-center">Requête envoyée</h3>
+                    <h3 id="pMsg" class="py-5 justify-content-center text-center">Message envoyée</h3>
 
 
                 </b-form>
