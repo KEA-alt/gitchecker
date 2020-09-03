@@ -11,15 +11,6 @@ use Stripe;
 
 class StripePaymentController extends Controller
 {
-    /**
-     * success response method.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function stripe()
-    {
-        return view('stripe');
-    }
 
     public function stripePost(Request $request)
     {
@@ -54,9 +45,6 @@ class StripePaymentController extends Controller
                 ]);
 
                 if ($charge['status'] == 'succeeded') {
-                    echo "<pre>";
-                    print_r($charge);
-                    exit();
                     return response()->json(['ok' => 'Payment succeed']);
                 } else {
                     return response()->json(['error' => 'Payment error']);
