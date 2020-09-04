@@ -9,6 +9,11 @@ use App\Jobs\SendMail;
 
 class AuditController extends Controller
 {
+    /**
+     * Call the execute of the security audit.
+     * @param  Request  $request
+     * @return Response
+     */
     public function audit(Request $request){
         $mail = $request->input('mail');
         $link = $request->input('link');
@@ -37,6 +42,11 @@ class AuditController extends Controller
         }
     }
 
+    /**
+     * Generate the report ID.
+     * @param  string  $link
+     * @return string
+     */
     private static function generateReportId($link){
         //recuperation des variables
         $part = explode("/", $link);
@@ -48,6 +58,11 @@ class AuditController extends Controller
         return $rand;
     }
 
+    /**
+     * Get the repositorie name from the link.
+     * @param  string  $link
+     * @return string
+     */
     private static function getRepoName($link){
         $part = explode("/", $link);
         $reponame = $part[4];
@@ -55,6 +70,11 @@ class AuditController extends Controller
         return $reponame;
     }
 
+    /**
+     * Check if the URL is a real Github URL
+     * @param  string  $url
+     * @return bool
+     */
     private static function checkGitLink($url){
         if(strpos($url, 'github.com') != false){
             if(filter_var($url, FILTER_VALIDATE_URL)) {

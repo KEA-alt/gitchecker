@@ -12,6 +12,11 @@ use Stripe;
 class StripePaymentController extends Controller
 {
 
+    /**
+     * Call validation of the Stripe payment.
+     * @param  Request  $request
+     * @return Response
+     */
     public function stripePost(Request $request)
     {
         $validator = Validator::make($request->all(), [
