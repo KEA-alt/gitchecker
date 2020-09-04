@@ -64,9 +64,11 @@
                     </b-form-group>
 
                     <b-button type="submit" :disabled="btnState" variant="dark">Envoyer</b-button>
-
-                    <h3 id="pMsg" class="py-5 justify-content-center text-center">Message envoyée</h3>
-
+                    
+                    <div class="mt-4">
+                        <b-alert :show="responseSuccessShow" variant="success">{{ responseSuccessMessage }}</b-alert>
+                        <b-alert :show="responseErrorShow" variant="danger">{{ responseErrorMessage }}</b-alert>
+                    </div>
 
                 </b-form>
             </div>
@@ -188,8 +190,11 @@
                 contactFirstname: '',
                 contactLastname: '',
                 contactEmail: '',
-                pMsg: '',
-                contactMessage: ''
+                contactMessage: '',
+                responseSuccessMessage: '',
+                responseSuccessShow: false,
+                responseErrorMessage: '',
+                responseErrorShow: false
             }
         },
 
@@ -200,8 +205,18 @@
                     lastname: this.contactLastname,
                     mail: this.contactEmail,
                     message: this.contactMessage
+                })
+                .then(response => {
+                    if (response.data.message) {
+                        this.responseSuccessMessage = response.data.message
+                        this.responseErrorShow = false;
+                        this.responseSuccessShow = true;
+                    } else {
+                        this.responseErrorMessage = response.data.error
+                        this.responseSuccessShow = false;
+                        this.responseErrorShow = true;
+                    }
                 });
-                this.pMsg.style.display = 'block'
                 this.contactLastname = '';
                 this.contactFirstname = '';
                 this.contactEmail = '';
@@ -210,8 +225,6 @@
         },
         mounted() {
             console.log("Component mounted.");
-            this.pMsg = document.getElementById("pMsg")
-            this.pMsg.style.display = 'none'
         }
     };
 

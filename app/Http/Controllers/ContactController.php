@@ -13,10 +13,6 @@ class ContactController extends Controller
     /**
      * Send an e-mail reminder to the user.
      * @param  Request  $request
-     * @param  string  $firstname
-     * @param  string  $lastname
-     * @param  string  $mail
-     * @param  string  $message
      * @return Response
      */
     public function sendEmail(Request $request)
@@ -34,12 +30,12 @@ class ContactController extends Controller
             
             try{
                 $this->dispatch(new SendMail($view,$title,$content,$data));
-                return response()->json(['message' => 'Request completed']);
+                return response()->json(['message' => 'Votre message a bien été envoyé merci']);
             }catch(Exception $e){
-                return response()->json(['error' => 'Request error']);
+                return response()->json(['error' => 'une erreur est survenue lors de l\'envoi']);
             }
         }else{
-            return response()->json(['error' => 'Invalid mail address']);
+            return response()->json(['error' => 'Adresse mail invalide']);
         }
     }
 }
