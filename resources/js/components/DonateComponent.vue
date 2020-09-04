@@ -70,6 +70,9 @@
                     </b-card>
                 </div>
             </div>
+            <div class="mt-4">
+                <b-alert :show="responseSuccessShow" variant="success">{{ responseSuccessMessage }}</b-alert>
+            </div>
             <div class="d-flex justify-content-center mt-2 p-3">
                 <img class width="150" height="150" src="img/donate.png" />
             </div>
@@ -94,7 +97,9 @@
                 ccExpiryYear: '',
                 cvvNumber: '',
                 inputAmount: 1,
-                amount: 1
+                amount: 1,
+                responseSuccessMessage: '',
+                responseSuccessShow: false
             }
         },
 
@@ -106,6 +111,18 @@
                     ccExpiryYear: this.ccExpiryYear,
                     cvvNumber: this.cvvNumber,
                     amount: this.amount
+                })
+                .then(response => {
+                    if (response.data.ok) {
+                        this.responseSuccessMessage = response.data.ok
+                        this.responseErrorShow = false;
+                        this.responseSuccessShow = true;
+                    }
+                    this.card_no = '';
+                    this.ccExpiryMonth = '';
+                    this.ccExpiryYear = '';
+                    this.cvvNumber = '';
+                    this.inputAmount = 1;
                 });
             }
         },
