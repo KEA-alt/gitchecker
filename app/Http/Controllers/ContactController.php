@@ -13,10 +13,6 @@ class ContactController extends Controller
     /**
      * Send an e-mail reminder to the user.
      * @param  Request  $request
-     * @param  string  $firstname
-     * @param  string  $lastname
-     * @param  string  $mail
-     * @param  string  $message
      * @return Response
      */
     public function sendEmail(Request $request)
