@@ -32,8 +32,8 @@
                 </b-form>
             </div>
 
-            <b-alert :show="responseSuccessShow" variant="success">{{ responseSuccessMessage }}</b-alert>
-            <b-alert :show="responseErrorShow" variant="danger">{{ responseErrorMessage }}</b-alert>
+            <b-alert class="text-center" :show="responseSuccessShow" variant="success">{{ responseSuccessMessage }}</b-alert>
+            <b-alert class="text-center" :show="responseErrorShow" variant="danger">{{ responseErrorMessage }}</b-alert>
 
             <div class="d-flex justify-content-center ">
                 <b-img class="" width="150" height="150" src="img/audit.png" />

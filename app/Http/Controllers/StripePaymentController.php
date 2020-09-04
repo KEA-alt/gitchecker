@@ -50,9 +50,9 @@ class StripePaymentController extends Controller
                 ]);
 
                 if ($charge['status'] == 'succeeded') {
-                    return response()->json(['ok' => 'Payment succeed']);
+                    return response()->json(['ok' => 'Votre paiement a bien été accepté. Merci ! 💙']);
                 } else {
-                    return response()->json(['error' => 'Payment error']);
+                    return response()->json(['error' => 'Votre paiement a été refusé. Désolé ! 🤔']);
                 }
             } catch (Exception $e) {
                 return $e->getMessage();
