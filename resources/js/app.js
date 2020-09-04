@@ -5,6 +5,12 @@
  */
 
 require('./bootstrap');
+import Vue from 'vue'
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+// Install BootstrapVue
+Vue.use(BootstrapVue)
+// Optionally install the BootstrapVue icon components plugin
+Vue.use(IconsPlugin)
 
 window.Vue = require('vue');
 import VueRouter from 'vue-router';
@@ -25,9 +31,13 @@ import Home from './components/HomeComponent.vue';
 import Doc from './components/DocComponent.vue';
 import Audit from './components/AuditComponent.vue';
 import Donate from './components/DonateComponent.vue';
+import Contact from './components/ContactComponent.vue';
+import Politique from './components/PolitiqueComponent.vue';
+import Conditions from './components/ConditionsComponent.vue';
+import Report from './components/ReportComponent.vue';
+import Error404 from './components/404Component.vue';
 
-const routes = [
-    {
+const routes = [{
         path: '/',
         component: Home
     },
@@ -42,10 +52,36 @@ const routes = [
     {
         path: '/donate',
         component: Donate
+    },
+    {
+        path: '/contact',
+        component: Contact
+    },
+    {
+        path: '/politique',
+        component: Politique
+    },
+    {
+        path: '/conditions',
+        component: Conditions
+    },
+    {
+        path: '/report/:reportId',
+        component: Report
+    },
+    {
+        path: '/error404',
+        component: Error404
+    },
+    {
+        path: '*',
+        redirect: '/error404'
     }
 ]
 
-const routeur = new VueRouter({routes});
+const routeur = new VueRouter({
+    routes
+});
 
 //Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 

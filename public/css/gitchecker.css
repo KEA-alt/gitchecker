@@ -1,6 +1,6 @@
 /*NAV*/
 .logoNav{
-  width: 5%;
+  width: 6em;
 }
 /*INDEX*/
 .slider{
@@ -9,4 +9,36 @@ background-position: center center;
 background-repeat: no-repeat;
 background-attachment: fixed;
 background-size: cover;
+}
+
+
+.row{
+  margin: 0 auto !important;
+}
+.smallImg{
+  width: 30%;
+}
+.gitImg{
+  width: 60%;
+}
+.bgWhite{
+  background-color: white;
+}
+.docImg{
+  width: 60%;
+  height: 60%;
+  margin: auto;
+}
+.donateForm{
+  width: 50%;
+  margin:0 auto;
+}
+.formDon{
+  width: 100%;
+}
+.whiteLab{
+  color: white;
+}
+.lock{
+  width: 20%;
 }
